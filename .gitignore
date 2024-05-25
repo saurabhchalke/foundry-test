@@ -12,3 +12,7 @@ docs/
 
 # Dotenv file
 .env
+
+# file_contents_generator.py
+scripts/
+*file_contents.md
