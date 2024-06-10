@@ -19,25 +19,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.inputs.ref }}
+    #     with:
+    #       ref: ${{ github.event.inputs.ref }}
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
+    #   - name: Set up Docker Buildx
+    #     uses: docker/setup-buildx-action@v2
 
-      - name: Cache Docker layers
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.cache/docker
-          key: ${{ runner.os }}-docker-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-docker-
+    #   - name: Cache Docker layers
+    #     uses: actions/cache@v3
+    #     with:
+    #       path: /home/runner/.cache/docker
+    #       key: ${{ runner.os }}-docker-${{ github.sha }}
+    #       restore-keys: |
+    #         ${{ runner.os }}-docker-
 
-      - name: Build Docker image
-        id: docker_build
-        run: |
-          docker build --tag formal-verification-runner:latest .
-        working-directory: ./path-to-your-Dockerfile-directory
+    #   - name: Build Docker image
+    #     id: docker_build
+    #     run: |
+    #       docker build --tag formal-verification-runner:latest .
+    #     working-directory: ./path-to-your-Dockerfile-directory
 
       - name: Run Formal Verification Runner
         id: run-verification
