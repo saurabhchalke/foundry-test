@@ -16,3 +16,6 @@ docs/
 # file_contents_generator.py
 scripts/
 *file_contents.md
+
+# Halmos files
+test/Halmos.t.sol
